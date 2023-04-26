@@ -1,6 +1,8 @@
 async function DelayedComponent() {
-    const response = await fetch("http://localhost:3000/api");
-    const { message } = await response.json();
+  const response = await fetch("http://localhost:3000/api", {
+    cache: "no-store",
+  });
+  const { message } = await response.json();
 
   return (
     <div>
@@ -10,3 +12,13 @@ async function DelayedComponent() {
 }
 
 export default DelayedComponent;
+
+function DelayedComponentSkeleton() {
+  return (
+    <div>
+      <p>Loading...</p>
+    </div>
+  );
+}
+
+export { DelayedComponentSkeleton };
