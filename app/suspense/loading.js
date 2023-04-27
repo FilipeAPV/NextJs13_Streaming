@@ -1,11 +1,11 @@
 import { DelayedComponentSkeleton } from "@/ui/DelayedComponent";
 
-function Loading() {
+function SusLoad() {
     return(
         <div className="mt-10">
-            <DelayedComponentSkeleton />    
-        </div>
+        <DelayedComponentSkeleton />    
+    </div>
     );
 }
 
-export default Loading;
+export default SusLoad;
